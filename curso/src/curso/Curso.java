@@ -83,6 +83,7 @@ public class Curso {
          // nvArr.sortArrays();
         
         System.out.println("Hola desde Windows");
+        System.out.println("Hola WIndows");
         
         /**Metodo equals*/
         //MetodoEquals igual = new MetodoEquals();
