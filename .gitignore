@@ -1,5 +1,6 @@
 #eliminamos directorios del proyecto en NetBeans
 #para poder trabajar en WIndows y Ubuntu
 /curso/nbproject
-build.xml
-manifest.mf
+/curso/build.xml
+/curso/manifest.mf
+/curso/test
