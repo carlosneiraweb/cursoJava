@@ -24,7 +24,7 @@ public class Curso {
         
         
         /**Metodos clase Arrays**/
-        MiClaseArrays nvArr= new MiClaseArrays();
+       // MiClaseArrays nvArr= new MiClaseArrays();
        //nvArr.ArrayToList();
        //String [] cambiar = nvArr.cambiarDatos("luna", 1);
         //nvArr.mostrarArray(cambiar);
@@ -73,7 +73,7 @@ public class Curso {
         //}
         */
         
-        nvArr.deepToString();
+        //nvArr.deepToString();
         //nvArr.jugarConArrays();
         //nvArr.copyOfRange();
         //nvArr.arrayToString();
@@ -82,7 +82,7 @@ public class Curso {
         //nvArr.metodoFill();
          // nvArr.sortArrays();
         
-        
+        System.out.println("Hola desde Windows");
         
         /**Metodo equals*/
         //MetodoEquals igual = new MetodoEquals();
