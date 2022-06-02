@@ -82,8 +82,8 @@ public class Curso {
         //nvArr.metodoFill();
          // nvArr.sortArrays();
         
-        System.out.println("Hola desde Windows");
-        System.out.println("Hola WIndows");
+        System.out.println("gitignore");
+        
         
         /**Metodo equals*/
         //MetodoEquals igual = new MetodoEquals();
