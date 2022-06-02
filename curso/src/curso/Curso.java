@@ -82,7 +82,7 @@ public class Curso {
         //nvArr.metodoFill();
          // nvArr.sortArrays();
         
-        System.out.println("gitignore");
+        System.out.println("Prueba 02/01");
         
         
         /**Metodo equals*/
