@@ -3,23 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package curso;
-import Persona.Person;
-import ArraysListas.MiClaseArrays;
-import Ejemplos.MetodoEquals;
-import java.util.Arrays;
+package Ejemplos;
 
 /**
  *
  * @author carlos
  */
-public class Curso {
-
-    
+public class LanzarEquals {
     
     public static void main(String[] args) {
         
-        
+        MetodoEquals me = new MetodoEquals();
+        me.mostrarEjemplos();
     }
     
 }

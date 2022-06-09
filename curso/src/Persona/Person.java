@@ -17,7 +17,10 @@ public class Person {
     }
     
     
-    public Person() {
+    public Person(String Name, String Surname, String Age) {
+        this.Name = Name;
+        this.Surname = Surname;
+        this.Age = Age;
     }
     
     
@@ -136,9 +139,9 @@ public  void mostrarPersona(Person uno){
                 || !this.Age.equals(persona.Age)){
             test = false;
         }else{
-            test = true;
+            test = true;  
         }
-        
+       
         
         
         

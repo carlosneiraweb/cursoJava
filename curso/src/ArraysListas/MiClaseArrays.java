@@ -1,5 +1,5 @@
 
-package Arrays;
+package ArraysListas;
 import java.util.Arrays;
 import Persona.Person;
 import java.util.Collections;
@@ -60,6 +60,20 @@ public int[] inicializarArrays(){
     
   return x;  
 }   
+
+ /**
+  * Metodo que compara dos matrices
+  */
+
+public Boolean compare( String[] uno, String[] dos){
+    Boolean test;
+    
+    test = Arrays.equals(uno, dos);
+    
+    return test;
+}
+
+
 
 
 /**
