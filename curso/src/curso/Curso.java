@@ -5,7 +5,7 @@
  */
 package curso;
 import Persona.Person;
-import ArraysListas.MiClaseArrays;
+import Collections.Array.MiClaseArrays;
 import Ejemplos.MetodoEquals;
 import java.util.Arrays;
 

@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ArraysListas;
+package Collections.ArrayLista;
 
+import Collections.ArrayLista.ArrayLista;
 import Persona.Person;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,7 +23,7 @@ public class InicioListas {
         List myList = new ArrayList();
         ArrayList<String> myArr = new ArrayList<>();
        
-               myArr.
+              
         
         
         
