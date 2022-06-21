@@ -22,7 +22,7 @@ public class MetodoEquals {
         Person t3 = t1; 
   
         String s1 = new String("GEEKS"); 
-        String s2 = new String("GEEKS11"); 
+        String s2 = new String("GEEKS"); 
         String uno = "hola";
         String dos = "hola2";
 

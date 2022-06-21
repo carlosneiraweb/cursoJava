@@ -24,7 +24,8 @@ public class InicioListas {
         ArrayList<String> myArr = new ArrayList<>();
        
               
-        
+     //Solo admite datos de tipo objeto
+     //no admite datos tipo primitivo
         
         
         
@@ -33,24 +34,43 @@ public class InicioListas {
     Person tres = new Person("ange","neira","sanchez");
     
     ArrayList<Person> ArrayPerson = new ArrayList<>();
+    ArrayList<Person> ArrayPerson2 = null;
     ArrayPerson.add(tres);
-    ArrayPerson.add(tres);
+    ArrayPerson.add(dos);
     ArrayPerson.add(uno); 
     
-    lista.recorrerArrayLista(ArrayPerson);
+    /**
+     * Eliminamos elementos null de la lista
+     */
+   // ArrayPerson2 = lista.EliminoNulosPorItinerador(ArrayPerson);
+    //ArrayPerson2 = lista.eliminarNulosRemoveList(ArrayPerson);
+    //lista.recorrerArrayListaPersona(ArrayPerson2);
       
+    
+    
+    
+    
     //lista.cambiarDatos(ArrayPerson, "middd");
     
     ArrayList<String> arr = new ArrayList<>();
     arr.add(uno.getName());
     arr.add(dos.getName());
     arr.add(tres.getName());
-    lista.ordenarLista(arr);
-     
+   // lista.ordenarLista(arr);
     
+    
+    
+    ArrayList<String> addNuevo = new ArrayList<>();
+    addNuevo.add("HOLA");
+    addNuevo.add("Adios");
+    //lista.insertarLista(arr,addNuevo);
+    //lista.recorrerListaString(arr);
    //fin main     
-    }
+    
+    
+    System.out.println("La lista contiene el elemento " + lista.contains(ArrayPerson, uno));
     
     
     
+            }  
 }
