@@ -9,6 +9,9 @@ import java.util.Objects;
  */
 public class Person {
 
+    public Person() {
+    }
+
     public Person(String Name, String Surname, String Age, String[] letras) {
         this.Name = Name;
         this.Surname = Surname;
@@ -22,7 +25,13 @@ public class Person {
         this.Surname = Surname;
         this.Age = Age;
     }
+
     
+    public Person(String Name, String Age) {
+        this.Name = Name;
+        this.Age = Age;
+    }
+
     
     public String Name;
     public String Surname;

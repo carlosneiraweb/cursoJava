@@ -1,5 +1,5 @@
 
-package Collections.Array;
+package Collections;
 import java.util.Arrays;
 import Persona.Person;
 import java.util.Collections;

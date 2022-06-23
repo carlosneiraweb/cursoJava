@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Collections.ArrayLista;
+package Collections;
 
-import Collections.ArrayLista.ArrayLista;
+import Collections.ArrayLista;
 import Persona.Person;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -35,9 +35,9 @@ public class InicioListas {
     
     ArrayList<Person> ArrayPerson = new ArrayList<>();
     ArrayList<Person> ArrayPerson2 = null;
-    ArrayPerson.add(tres);
+    ArrayPerson.add(uno);
     ArrayPerson.add(dos);
-    ArrayPerson.add(uno); 
+    ArrayPerson.add(tres); 
     
     /**
      * Eliminamos elementos null de la lista
@@ -68,9 +68,12 @@ public class InicioListas {
    //fin main     
     
     
-    System.out.println("La lista contiene el elemento " + lista.contains(ArrayPerson, uno));
+    //System.out.println("La lista contiene el elemento " + lista.contains(ArrayPerson, uno));
     
+    System.out.println("Creamos una lista sincronizada ");
+    lista.SynchronizedList(ArrayPerson);
     
+    lista.recorrerArrayListaPersona(ArrayPerson);
     
             }  
 }

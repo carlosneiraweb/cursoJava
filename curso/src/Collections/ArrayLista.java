@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Collections.ArrayLista;
+package Collections;
 import Persona.Person;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -134,6 +134,12 @@ public class ArrayLista {
     
     /**
      * Metodo que comprueba que un elemento se encuentra en la lista
+     * @param lis<br>
+     * ArrayList de objetos Person<br>
+     * @param p <br>
+     * Objecto person<br>
+     * @return 
+     * Boolean
      */
     
     public Boolean contains(ArrayList<Person> lis, Person p){
@@ -143,6 +149,30 @@ public class ArrayLista {
     //ffin contains    
     }
     
+    
+    /**
+     * Metodo que recibe una lista sin sincronizar<br>
+     * la sincroniza y hace modificaciones sobre ella<br>
+     * @param lis <br>
+     * Lista de objetos Person
+     */
+    public void SynchronizedList(ArrayList<Person> lis){
+        
+    List<Person> lisSinc = Collections.synchronizedList(new ArrayList(lis));
+    synchronized(lisSinc){
+        Iterator<Person> it = lisSinc.iterator();
+        while(it.hasNext()){
+            Person p = it.next();
+            if(p.getName() == "carlos"){ it.remove();}
+            System.out.println("La lista queda asi: "+ lisSinc);
+        }
+        
+    } 
+        
+    
+        
+    //fin SynchronizedList    
+    }
     
     //fin clase
 }

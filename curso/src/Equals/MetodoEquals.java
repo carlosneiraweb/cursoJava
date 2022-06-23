@@ -1,5 +1,5 @@
 
-package Ejemplos;
+package Equals;
 import Persona.Person;
 
 /**

@@ -5,8 +5,8 @@
  */
 package curso;
 import Persona.Person;
-import Collections.Array.MiClaseArrays;
-import Ejemplos.MetodoEquals;
+import Collections.MiClaseArrays;
+import Equals.MetodoEquals;
 import java.util.Arrays;
 
 /**
