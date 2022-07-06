@@ -20,14 +20,15 @@ public class Inicializadores{
 
     
     */
- 
+    
     static int a; //1
     int b; //2
+    public int x;
  
     public Inicializadores() {
         System.out.printf("Valor de a:%1s\nValor de b:%2s\n", a, b);
     }
- 
+
 //Inicializador Instancia
     { //2
         b = a * 2;
@@ -40,8 +41,16 @@ public class Inicializadores{
     
       public static void main(String[] args) {
           Inicializadores ini = new Inicializadores();
-         
-      }
-    
+          System.out.println("Tambien se puede acceder con una instancia pero no es aconsejable");
+          System.out.println(ini.a);
+          
+       
+   
+    }
+          
+          
+          
+      
+      
     //Inicializadores 
 }
