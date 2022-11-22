@@ -13,10 +13,11 @@ public class Circle extends Point{
     
     private int radius;
 
-    public Circle(int radius, int x, int y) {
-        super(x, y);
-        this.radius = radius;
+    public Circle(int x, int y, String saludos) {
+        super(x, y, saludos);
     }
+
+    
 
     public int getRadius() {
         return radius;
@@ -36,7 +37,7 @@ public class Circle extends Point{
     @Override
     public String toString(){
     
-        return " "+radius;
+        return " "+radius+ " "+this.saludos;
     
     }
     /**

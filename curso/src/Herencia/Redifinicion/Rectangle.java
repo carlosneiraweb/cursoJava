@@ -13,14 +13,18 @@ public class Rectangle extends Shape{
     
     private String radius;
     private int l1,l2,l3,l4;
+    public String rectangulo ="Soy un rectangulo";
 
-    public Rectangle(String radius, int l1, int l2, int l3, int l4) {
+    public Rectangle(String radius, int l1, int l2, int l3, int l4, String saludos) {
+        super(saludos);
         this.radius = radius;
         this.l1 = l1;
         this.l2 = l2;
         this.l3 = l3;
         this.l4 = l4;
     }
+
+    
 
     public String getRadius() {
         return radius;
@@ -63,15 +67,20 @@ public class Rectangle extends Shape{
     }
     
     
-    
+    public void pintoRectangulo(){
+       System.out.println("Pinto rectangulo"); 
+    }
 
     
     @Override
     public String toString(){
         return "mi radio es "+this.radius+ " mis lados mide "+this.l1+ " "+this.l2+
-                " "+this.l3+" "+this.l4;
+                " "+this.l3+" "+this.l4+ " "+this.saludos;
     }
     
+    /**
+     *  Metodo draw de Rectangle
+     */
     @Override
     void draw(){
         

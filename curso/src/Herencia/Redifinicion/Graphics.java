@@ -22,12 +22,40 @@ public class Graphics {
        */
       
        
-       Shape[] shapes = new Shape[]{new Point(10,20), new Circle(10,20,30), new Rectangle("20",20,30,15,10)};
+       //Shape[] shapes = new Shape[]{new Point(10,20), new Circle(10,20,30), new Rectangle("20",20,30,15,10)};
         
-       for(int i = 0; i < shapes.length; i++)
-           shapes[i].draw();
+//       for(int i = 0; i < shapes.length; i++)
+//           shapes[i].draw();
 
-       Shape s = new Rectangle("20",20,30,15,10);
+       Shape sh = new Shape("Saludos forma");
+       sh.claseShape();
+       sh.draw();
+       System.out.println(sh.forma);
+       System.out.println(sh.saludos);
+       sh.protectedShape();
+       Shape.metodoStaticoSape();
+       
+       Shape s = new Rectangle("20",20,30,15,10,"Saludos desde un rectangulo ");
+       s.claseShape();
+       s.draw();
+       s.protectedShape();
+       System.out.println(s.saludos);
+
+       Rectangle r = new Rectangle("1000",10,50,50,50,"Rectangulo");
+       s.claseShape();
+       r.draw();
+       r.protectedShape();
+       System.out.println(r.saludos);
+       
+       
+       Fractal f = new Fractal("0000000000",10,50,50,50,"Fractal");
+       
+       System.out.println(f.forma);
+       System.out.println(f.fractal);
+       System.out.println(f.saludos);
+       f.protectedShape();
+       f.pintoRectangulo();
+       
        
     }
     

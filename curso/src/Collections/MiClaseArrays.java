@@ -104,12 +104,17 @@ public void ArrayToList(){
  * @param arreglo <br>
  * Arreglo de integer
  * @param num <br>
- * Numero a buscar
+ * Numero a buscar<br>
+ * Opcional en indice por donde comenzar a buscar <br>
+ * y por donde acabar la busqueda.<br>
+ * Si no encuentra el elemento devuelve el indice donde se insertaria.
+ * 
  */
 
 public Integer busquedaBinaria(Integer[] arreglo, Integer num){
     Arrays.sort(arreglo);
-    Integer numero = Arrays.binarySearch(arreglo, num);
+    
+    Integer numero = Arrays.binarySearch(arreglo, 0,5,num);
   
     return numero;
     
@@ -138,16 +143,13 @@ public void jugarConArrays(){
     String[] b = {"aaa","bbb","ccc"};
     String[] c = {"1111","2222","33333"};
     String[] d = {"xxx","yyyyy","ppppp"};
-    String[][] x = new String[2][];
-    x[0] = a;
-    x[1] = b;
+    String[][] x = new String[2][2];
     
     
-    //x[2] = c;
-   // x[3] = d;
+   
     for(String[] p : x){
         System.out.println("mostramos arrays de arrays");
-        System.out.println(p.toString());
+        System.out.println(java.util.Arrays.deepToString(p));
     }
     
 }
@@ -254,12 +256,12 @@ public void deepToString(){
 public void functionEquals(){
     
     
-    String[] a = new String[]{"uno", "dos"};
+    String[] a = new String[]{"uno", "dos","dos"};
     String[] b = {"uno", "dos", "dos"};
     System.out.println("Solo seran iguales si tienen el mismo contenido y tamaño ¿a es igual a b? "+ Arrays.equals(a,b));
     System.out.println("Aplicando equals al primer array "+a.equals(b));
     
-    
+    /*
     String[] array = {"hola", "adios"};
     Person[] uno = {new Person("carlos", "neira", "40", array),
                     new Person("carlos", "neira", "40",array)};
@@ -285,6 +287,9 @@ public void functionEquals(){
             "para ver si su contenido es igual.");
     System.out.println("Son iguales "+ Arrays.equals(uno, dos));
     
+    
+    
+    */
     
     
 }

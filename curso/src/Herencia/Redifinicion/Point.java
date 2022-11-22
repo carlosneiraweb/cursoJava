@@ -13,11 +13,14 @@ public class Point extends Shape{
     
     private int x,y;
 
-    public Point(int x, int y) {
+    public Point(int x, int y, String saludos) {
+        super(saludos);
         this.x = x;
         this.y = y;
     }
-
+    
+    
+    
     public int getX() {
         return x;
     }
@@ -39,7 +42,7 @@ public class Point extends Shape{
     @Override
     public String toString(){
     
-        return "("+x+","+y+")";
+        return "("+x+","+y+")"+" "+this.saludos;
     
     }
     /**
@@ -47,7 +50,7 @@ public class Point extends Shape{
      */
     void draw(){
         
-        System.out.println("Poijnt draw at " +toString());
+        System.out.println("Point draw at " +toString());
         
 }
     
