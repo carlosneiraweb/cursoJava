@@ -3,15 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ClaseObject;
+package curso.Jeff.Clone;
 
 /**
  *
- * @author Carlos
+ * @author carlos
  */
-
-
-    class Date{
+  class Date{
             
         int year,month,day;
         Date(int year,int month,int day){
@@ -27,14 +25,15 @@ package ClaseObject;
 
 
 
-public class Employee implements Cloneable{
+public class EmployeeClone implements Cloneable{
     
     
     
     String name;
-        int age;
-        Date hireDate;
-        Employee(String name, int age, Date hireDate){
+    int age;
+    Date hireDate;
+    
+        EmployeeClone(String name, int age, Date hireDate){
             this.name = name;
             this.age = age;
             this.hireDate = hireDate;
@@ -43,7 +42,7 @@ public class Employee implements Cloneable{
         @Override 
         public Object clone() throws CloneNotSupportedException
         {
-            Employee emp =  (Employee) super.clone();
+            EmployeeClone emp =  (EmployeeClone) super.clone();
             if(hireDate != null)
                 emp.hireDate = new Date(hireDate.year, hireDate.month, hireDate.day);
                         
@@ -54,8 +53,8 @@ public class Employee implements Cloneable{
         
         public static void main(String[] args) throws CloneNotSupportedException{
             
-            Employee e1 = new Employee("John",46,new Date(2000,1,20));
-            Employee e2 = (Employee) e1.clone();
+            EmployeeClone e1 = new EmployeeClone("John",46,new Date(2000,1,20));
+            EmployeeClone e2 = (EmployeeClone) e1.clone();
             System.out.println(e1 == e2); //false
             System.out.println(e1.name == e2.name);//true
             System.out.println(e1.hireDate == e2.hireDate);//false

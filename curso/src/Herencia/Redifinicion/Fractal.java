@@ -16,6 +16,7 @@ public class Fractal extends Rectangle {
     public Fractal(String radius, int l1, int l2, int l3, int l4, String saludos) {
         super(radius, l1, l2, l3, l4, saludos);
         this.fractal = "Soy un fractal";
+        
     }
     
     

@@ -40,11 +40,13 @@ public class Graphics {
        s.draw();
        s.protectedShape();
        System.out.println(s.saludos);
+       
 
        Rectangle r = new Rectangle("1000",10,50,50,50,"Rectangulo");
        s.claseShape();
        r.draw();
        r.protectedShape();
+       r.pintoRectangulo();
        System.out.println(r.saludos);
        
        

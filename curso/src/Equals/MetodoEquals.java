@@ -18,11 +18,11 @@ public class MetodoEquals {
         int a = 1;
         int b = 2;
         Person t1 = new Person("a","b","c"); 
-        Person t2 = new Person("a","b","j"); 
+        Person t2 = new Person("a","b","c"); 
         Person t3 = t1; 
   
         String s1 = new String("GEEKS"); 
-        String s2 = new String("GEEKS"); 
+        String s2 = new String("GEEKSkkkkk"); 
         String uno = "hola4444";
         String dos = "hola";
 
@@ -43,12 +43,8 @@ public void mostrarEjemplos(){
        
         System.out.print("Si no sobrescribimos el metodo equals da false =>");
         System.out.println(t1.equals(t2));
-        
-    
-    
- 
     /*
-        System.out.print("Con datos primitivos == ");
+    System.out.print("Con datos primitivos == ");
         System.out.println(a == b);
         System.out.print("Compara string sin crear objeto string ");
         System.out.println(uno == dos);
@@ -62,11 +58,10 @@ public void mostrarEjemplos(){
                 " con objetos compara la referencia.");
         System.out.println(t1.getName() == t2.getName());
         System.out.println(t1.getName().compareTo(t2.getName()));
-  
-  
-   
+    */
+
     
-    
+    /*
         //CompareTo compara cadenas lexicográficamente  
         //si a1 > a2, devuelve un número negativo
         //si a1 < a2, devuelve un número positivo
@@ -79,7 +74,7 @@ public void mostrarEjemplos(){
         str_Sample = "b";
         System.out.println("Compare To 'b' b is : " + str_Sample.compareTo("b"));
         
-      */  
+        */
         
       
     
