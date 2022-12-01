@@ -1,0 +1,15 @@
+No es posible extender ujna clase final.Se declaran final para que no haya subclases.
+
+Super() solo puede aparecer en el constructor.
+
+Una clase que sus instancias no pueden ser nmodificadas se conoce como inmutable.
+
+Se puede acceder a un método de la superclase sustituida con la palabra reservada super.
+
+NO es posible sustituir un método final. Además el metodo debe ser mas o igual de accesible que el que sustituya.
+
+Cuando hacemos un UpCasting la subclase en capsulada en la clase padre pierde el acceso a sus metodos 
+y propiedades. Puede acceder a sus metodos si esta en la dos clases y subtituidos en la subclase;
+
+Herencia de implementación se centra en la extension de una clase con otra nueva "es un" Coche => Vehiculo
+La composición se compone de clases fuera de otras "tiene un" Coche tiene motor, ruedas

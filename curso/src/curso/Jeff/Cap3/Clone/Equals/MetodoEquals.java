@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package curso.Jeff.Clone.Equals;
+package curso.Jeff.Cap3.Clone.Equals;
 
 /**
  *
@@ -28,7 +28,7 @@ public class MetodoEquals {
     
  
     @Override public boolean equals(Object o){
-        
+        if(o == this){return true;}
         if(!(o instanceof MetodoEquals))
             return false;
         MetodoEquals m = (MetodoEquals) o;
