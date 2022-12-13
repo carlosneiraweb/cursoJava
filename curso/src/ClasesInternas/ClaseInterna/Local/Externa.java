@@ -1,0 +1,55 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ClasesInternas.ClaseInterna.Local;
+
+
+
+/**
+ *
+ * @author carlos
+ */
+public class Externa {
+    
+    public void imprimir(){
+        System.out.println("Imprimo desde la clase Externa");
+        final String vfinal = "Soy una variable final en el metodo";
+        String saludo = "Saludos desde imprimir";
+        
+        class Local{
+            public String local = "Soy local";
+            
+            public void imprimir(){
+                
+              System.out.println("Imprimo desde la clase local");
+              System.out.println(vfinal); 
+              System.out.println(saludo);
+           
+            }
+            
+        }
+        
+        Local local1 = new Local();
+        local1.imprimir();
+       
+        
+        System.out.println("Fin de imprimir de la clase Externa");  
+    
+}
+    public static void main(String[] ar){
+        
+        Externa externa1 = new Externa();
+        externa1.imprimir();
+        
+        
+       
+    }
+    
+    
+    
+    
+    
+    //fin externa
+}

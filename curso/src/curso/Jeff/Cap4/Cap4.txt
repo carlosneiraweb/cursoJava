@@ -1,0 +1,8 @@
+Clases internas estatica
+
+    No se puede acceder a campos de instancia de la clase padre.
+    Puede acceder a llamar a miembros static incluso privados de la clase padre.
+    Para acceder a miembros static desde la clase padre a la clase static se pone padre.hija.metodo
+    Si algún método en la clase static no es estatico debe ser llamado desde una instancia
+        de la clase padre.static x = new padre.sttaic();
+        x.metodoNoStatic

@@ -1,0 +1,10 @@
+No se puede acceder a campos de instancia.
+
+Puede acceder a llamar a miembros static incluso privados.
+
+Para acceder a miembros static desde la clase padre a la clase staticse pone 
+el nombre de la clase padre.static.metodo
+
+SI algún método de la clase static no es estatico debe ser llamado
+desde una instancia de la clase:
+ padre.static x = new Padre.static(); 

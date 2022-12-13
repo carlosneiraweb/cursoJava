@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package curso.Jeff.Cap3.Apuntes.Upcasting;
+package curso.Jeff.Cap3.Upcasting;
 
 /**
  *
