@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package curso.Jeff.Cap4;
+package curso.Jeff.Cap4.ClasesInternas;
 
 /**
  *

@@ -1,0 +1,6 @@
+NO COMPROBADAS => Excepciones en tiempo de ejecución (error código) RUNTIMEEXCEPTION
+
+COMPROBADAS => Representan un problema con la posiblidad de recuperación. Si quieres por 
+                ejemplo acceder a un archivo y no existe. No hay error en el código.
+                Se comprueban en la compilación.
+               Exception y todas sus subclases menos RUNTIMEEXCEPTION

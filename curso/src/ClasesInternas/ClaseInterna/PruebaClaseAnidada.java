@@ -39,6 +39,7 @@ public class PruebaClaseAnidada {
                 + ca.cantidadPuntosCuadrante(3));
         System.out.println("Cantidad de puntos en el cuarto cuadrante+"
                 + ca.cantidadPuntosCuadrante(4));
+        
 
 
     }

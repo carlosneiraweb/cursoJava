@@ -10,30 +10,29 @@ package ClasesInternas.ClaseInterna.Static;
  * @author carlos
  */
 public class OuterClass {
-   
+
     String outerField = "Outer Field";
     static String staticOuterField = "Static outer fiel";
-    
-    class InnerClass{
-       
-        void accessMembers(){
+
+    class InnerClass {
+
+        void accessMembers() {
             System.out.println(outerField);
             System.out.println(staticOuterField);
         }
     }
-    
+
     static class StaticNestedClass{
-        
-        void accessMembers(OuterClass outer){
-           // System.out.println(outerField);
+
+        void accessMembers(OuterClass outer) {
+            //System.out.println(outerField);
             System.out.println(outer.outerField);
             System.out.println(staticOuterField);
         }
-        
+
     }
-    
-    public static void main(String[] args) 
-    {
+
+    public static void main(String[] args) {
         System.out.println("Inner class:");
         System.out.println("------------");
         OuterClass outerObject = new OuterClass();
@@ -42,16 +41,14 @@ public class OuterClass {
 
         System.out.println("\nStatic nested class:");
         System.out.println("--------------------");
-        StaticNestedClass staticNestedObject = new StaticNestedClass();        
+        StaticNestedClass staticNestedObject = new StaticNestedClass();
         staticNestedObject.accessMembers(outerObject);
-               
-        
+
         System.out.println("\nTop-level class:");
         System.out.println("--------------------");
-        TopLevelClass topLevelObject = new TopLevelClass();        
-        topLevelObject.accessMembers(outerObject);                
+        TopLevelClass topLevelObject = new TopLevelClass();
+        topLevelObject.accessMembers(outerObject);
     }
 
-   
     //fin OuterClass
 }

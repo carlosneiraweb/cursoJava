@@ -11,14 +11,14 @@ package ClasesInternas.ClaseInterna.Local;
  *
  * @author carlos
  */
-public class Externa {
+public class Local {
     
     public void imprimir(){
         System.out.println("Imprimo desde la clase Externa");
         final String vfinal = "Soy una variable final en el metodo";
         String saludo = "Saludos desde imprimir";
         
-        class Local{
+        class LocalB{
             public String local = "Soy local";
             
             public void imprimir(){
@@ -31,7 +31,7 @@ public class Externa {
             
         }
         
-        Local local1 = new Local();
+        LocalB local1 = new LocalB();
         local1.imprimir();
        
         
@@ -40,7 +40,7 @@ public class Externa {
 }
     public static void main(String[] ar){
         
-        Externa externa1 = new Externa();
+        Local externa1 = new Local();
         externa1.imprimir();
         
         

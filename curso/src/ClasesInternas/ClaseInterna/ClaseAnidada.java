@@ -16,12 +16,11 @@ import java.util.ArrayList;
 public class ClaseAnidada {
  
     private ArrayList<Punto> puntos;
-    public String SaludosClaseExterna = "Saludos clase externa";
-    private String SaludosPrivate =" Saludos desde clase externa campo private";
-    
+    private String claseAnidada = "Saludos";
+   
     private class Punto{
     
-      private String SaulosPrivateClaseInterna = "SaulosPrivateClaseInterna";
+      
       private int x,y;
       
         public Punto(int x, int y){
@@ -51,30 +50,23 @@ public class ClaseAnidada {
    
     }
     
-    public void SaludosDesdeClaseINternaPrivate(){
-        System.out.println(SaulosPrivateClaseInterna);   
-    }
-    public void SaludoClaseExternaPrivate(){
-        System.out.println(SaludosPrivate);
-    }
-    public void SaludoClaseExterna(){
-        System.out.println(SaludosClaseExterna);
-    }
-    public void SaludosClaseInterna(){
-        System.out.println("Saludos desde clase interna");
-    }
+    
     
 //fin Punto   
   }    
     
-    
+    /**
+     *
+     */
     public ClaseAnidada(){
-        puntos = new ArrayList<Punto>();
+        puntos = new ArrayList<>();
+        
         
     }
     
     public void agregarPunto(int x, int y){
         puntos.add(new Punto(x,y));
+        
     }
     
     public int cantidadPuntosCuadrante(int cuadrante){
