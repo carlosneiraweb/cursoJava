@@ -1,4 +1,5 @@
-NO COMPROBADAS => Excepciones en tiempo de ejecución (error código) RUNTIMEEXCEPTION
+NO COMPROBADAS => Excepciones en tiempo de ejecución (error código) RUNTIMEEXCEPTION.
+                    No necesitan declararse en el método con throws.
 
 COMPROBADAS => Representan un problema con la posiblidad de recuperación. Si quieres por 
                 ejemplo acceder a un archivo y no existe. No hay error en el código.

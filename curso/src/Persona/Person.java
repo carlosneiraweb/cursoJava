@@ -102,7 +102,11 @@ public class Person {
         this.Letras = Letras;
     }
     
-    
+public static void saludar(){
+    System.out.println("Saludos desde metodo static");
+}    
+
+
 public  void mostrarPersona(Person uno){
     
      System.out.println("Mostramos los objetos");
