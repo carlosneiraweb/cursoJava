@@ -23,14 +23,14 @@ public class MetodoEquals {
   
         String s1 = new String("GEEKS"); 
         String s2 = new String("GEEKSkkkkk"); 
-        String uno = "hola4444";
+        String uno = "hola";
         String dos = "hola";
 
         /**
          * Meotod que muestra ejemplos
          */
 public void mostrarEjemplos(){
-    
+    /*
     //REVISAR NO ESTE SOBREESCRITO METODO EQUALS EN PERSON
         System.out.println("Si no se sobreescribe el metodo en la clase equals");
         System.out.println(" funciona igual que == osea compara la referencia");
@@ -43,7 +43,7 @@ public void mostrarEjemplos(){
        
         System.out.print("Si no sobrescribimos el metodo equals da false =>");
         System.out.println(t1.equals(t2));
-    /*
+    */
     System.out.print("Con datos primitivos == ");
         System.out.println(a == b);
         System.out.print("Compara string sin crear objeto string ");
@@ -58,7 +58,7 @@ public void mostrarEjemplos(){
                 " con objetos compara la referencia.");
         System.out.println(t1.getName() == t2.getName());
         System.out.println(t1.getName().compareTo(t2.getName()));
-    */
+    
 
     
     /*

@@ -10,7 +10,7 @@ package curso.Jeff.Cap3.Abstract;
  * @author carlos
  */
 abstract class Shape {
-    
+    String nombre;
     abstract void draw();
     public void saludosAbstract(){
         System.out.println("Soy un metodo de la clase Shape y no soy abstracto");

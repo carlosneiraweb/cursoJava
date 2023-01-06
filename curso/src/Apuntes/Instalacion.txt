@@ -1,0 +1,18 @@
+
+		URLS
+https://ubunlog.com/instalar-configurar-java-ubuntu-17-04/?utm_source=feedburner&utm_medium=%24%7Bfeed%2C+email%7D&utm_campaign=Feed%3A+%24%7BUbunlog%7D+%28%24%7BUbunlog%7D%29
+
+
+
+
+
+RUTA JAVA => /usr/lib/jvm/java-17-openjdk-amd64
+RUTA NETBEANS => /usr/local/netbeans-11.3
+
+VARIABLES DE ENTORNO
+
+sudo nano /etc/environment
+                          
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/>
+JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"	
+echo $JAVA_HOME

@@ -1,0 +1,32 @@
+E => Indica elemento
+T => Tipo
+K => clave
+K => Key
+
+Tipo concreto 
+
+    El nombre de una clase o interfaz se pasa al parámetro de tipo
+    List<Employee>employees;
+
+Tipo Parametrizado
+
+    El nombre de un tipo de parametrizado se pasa al parámetro de tipo
+    List<List<String>>name List;
+    LOs elementos de la lista son listas de cadenas
+
+Tipo matriz
+
+    Una matriz se pasa al parámetro de tipo
+    List<String[]>countries;
+
+Parametro de tipo
+
+    Un parámetro de tipo se pasa al parámetro de tipo
+    classX<E>{List<E>queue;
+    El parametro de tipo E de X se pasa al de E de List;
+
+Comidin
+    El '?' se pasa al parámetros de tipo.
+    List<?>list;
+    Los elementos de la lista son desconocidos.
+    

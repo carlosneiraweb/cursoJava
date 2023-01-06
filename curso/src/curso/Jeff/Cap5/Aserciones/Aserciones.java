@@ -1,7 +1,7 @@
 //https://docs.oracle.com/javase/7/docs/technotes/guides/language/assert.html
 package curso.Jeff.Cap5.Aserciones;
 
-import Aserciones.*;
+
 import curso.Jeff.Cap5.Aserciones.Precondiciones;
 
 /**
