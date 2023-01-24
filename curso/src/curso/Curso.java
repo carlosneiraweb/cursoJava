@@ -20,6 +20,7 @@ public class Curso {
     public static void main(String[] args) {
         
         System.out.println("Hola desde Ubuntu 20");
+        System.out.println(Double.max(10.5, 11.3));
         
     }
     
