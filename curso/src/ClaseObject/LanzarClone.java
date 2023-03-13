@@ -5,7 +5,7 @@
  */
 package ClaseObject;
 
-import Persona.Person;
+
 
 /**
  *
