@@ -16,9 +16,9 @@ public class lanzarSistema {
         
         Sistema si = new Sistema();
         
-        //si.arrayCopiar();
+        si.arrayCopiar();
         //si.consola();
-        si.metodos();
+        //si.metodos();
         
     }
     

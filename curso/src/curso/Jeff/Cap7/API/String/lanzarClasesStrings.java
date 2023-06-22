@@ -9,7 +9,7 @@ package curso.Jeff.Cap7.API.String;
  *
  * @author carlos
  */
-public class lanzarCadenas {
+public class lanzarClasesStrings {
     
     
     
@@ -18,12 +18,21 @@ public class lanzarCadenas {
              
     Cadenas c = new Cadenas();
     
+    //c.metodosEstaticos();
     //c.bytes();
     //c.chars();
-    //c.miString();
-      //c.encontrar();
-        c.trabajarCadenas();
-             
+    //c.encontrar();
+    //c.compararCadenas();
+     //trabajarCadenas();
+     
+     StringBuilderJava sb = new StringBuilderJava();
+     //sb.metodosContructores();
+     sb.BuliderMutable();
+                  
     }
+    
+    
+    
+    
     
 }

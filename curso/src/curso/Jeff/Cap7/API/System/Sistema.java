@@ -21,10 +21,17 @@ public class Sistema {
     
 public void arrayCopiar(){
     
+    long inicio = System.nanoTime();
+    
+    
     String[] a1 = {"Avila","Burgos","León","Palencia","Salamanca", "Segovia","Soria","Valladolid","Zamora"};	   
     String[] a2 = new String[a1.length]; 
-    System.arraycopy(a1,0,a2,0,5);
+    System.arraycopy(a1,0,a2,0,a1.length);
     System.out.println(Arrays.toString(a2));
+    
+    long fin = System.nanoTime();
+    
+    System.out.println("Hemos tardado en realizar la operación => "+ ( fin - inicio ));
    
 } 
 

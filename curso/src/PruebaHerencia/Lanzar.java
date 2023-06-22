@@ -18,7 +18,7 @@ public class Lanzar {
         Intermedia inter = new Intermedia("Inpr", "Inpu", "Apu", "Apri", "Apr");
         System.out.println(inter.Apr);
         
-        
+       
         
         
     }

@@ -132,7 +132,7 @@ public  void mostrarPersona(Person uno){
     }
     
     
-
+/*
     
     @Override
     public boolean equals(Object obj){
@@ -163,6 +163,6 @@ public  void mostrarPersona(Person uno){
         
 }
   
-
+*/
 //fin Person
 }
