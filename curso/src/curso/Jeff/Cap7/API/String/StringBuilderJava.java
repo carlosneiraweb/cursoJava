@@ -50,7 +50,8 @@ public class StringBuilderJava {
        System.out.println("Añado mundo ");
        muto.append(" mundo");
        System.out.println(muto);
-       
+       System.out.println("Variable de la clase String inmutable");
+       String noMutable = new String("Hola Mudo");
        
        
        
