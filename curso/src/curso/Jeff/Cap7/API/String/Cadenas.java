@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 import java.util.TimeZone;
+import java.util.regex.Pattern;
 import java.util.stream.IntStream;
 
 /**
@@ -21,7 +22,7 @@ public class Cadenas {
     String saludo2 = new String("hello");
 
     public void bytes() {
-
+        
         //Entero con signo 8 bits de -128 a 128
         byte[] b = saludo2.getBytes();
         System.out.println(b[0] + " " + Arrays.toString(b));
@@ -124,7 +125,7 @@ public class Cadenas {
         String seg = "Casa en el pueblo";
 
         String strOb1 = "java2s.com";
-
+        
         System.out.println("Java String.charAt(int index)");
         System.out.println("Char at index 3 '" + strOb1.charAt(3) + "'");
         System.out.println("");
@@ -186,7 +187,7 @@ public class Cadenas {
         System.out.println("");
 
         System.out.println("Equals de la clase Object no puedes fallar esto");
-        String uno = new String("Hola mundo");
+        String uno = "Hola mundo";
         String dos = new String("Hola mundo");
         String tres = "hola";
         String cuatro = "hola";
@@ -360,6 +361,7 @@ public class Cadenas {
                                Divide un string por la expresi\u00f3n regular dada. 
                                 Devuelve Array String""");
         String exp = " ";
+    
         String[] spli = pri.split(exp);
 
         System.out.println(spli[0]);
@@ -453,7 +455,61 @@ public class Cadenas {
         System.out.println(email);
         
 
+        System.out.println("");
+        System.out.println("Metodo Strip elimina los espacios vacios iniciales o finales parecido a trim()");
+        String stp =" Soy  un string con espacios ";
+        System.out.println("Mi longitud es: "+stp.length()+ " "+stp);
+        
+        System.out.println(stp.strip());
+        System.out.println("Aplico strip y ahora mi longitud es: "+stp.length());
+        System.out.println("Espacios vacios al inicio"+stp.stripLeading());
+        System.out.println("");
+        System.out.println("Espacios vacios al final "+stp.stripTrailing());
+        System.out.println("");
+        
+        System.out.println("Metodo split");
+        
+        
+        
+        
+        System.out.println("Metodo matches clase String");
+        String reg = ".*[abc].*";
+        String cad = "la casa vacia";
+        Boolean t = cad.matches(reg);
+        System.out.println(t );
+        
+        
         //fin trabajarCadenas
+    }
+    
+    
+   
+    public void Ejercicio(){
+        
+        /*
+        String prueba = "Prueba de metodos";
+        String otro = "otro string";
+        
+        System.out.println(prueba.concat(otro.substring(0, 3).toUpperCase()));
+        */
+        System.out.println("Diferencia entre instanciar un String o no");
+        
+        long inicio = System.nanoTime();
+        String insta = new String("Soy un String con new");
+        
+        System.out.println("");
+        long fin = System.nanoTime();
+    
+        System.out.println("Hemos tardado en realizar la operación => "+ ( fin - inicio ));
+        
+        long ini2 = System.nanoTime();
+        String noIns = "Soy un String con new";
+        
+        long fin2 = System.nanoTime();
+    
+        System.out.println("Hemos tardado en realizar la operación => "+ ( fin2 - ini2 ));
+        
+        //fin Ejercicio
     }
 //fin Cadenas
 }

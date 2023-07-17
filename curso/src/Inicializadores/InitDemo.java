@@ -1,4 +1,7 @@
 
+import Inicializadores.InicializacionExcepciones;
+
+
 
 
 
@@ -12,7 +15,7 @@
 public class InitDemo {
 
     
-    
+    /*
     static boolean bool1;
     boolean bool2;
     static byte byte1;
@@ -109,10 +112,10 @@ public class InitDemo {
         System.out.println("[instance] double4 = "+double4);
         System.out.println();
     }
-    
+    */
     public static void main(String[] args) {
        
-       
+    /*   
        System.out.println("main() started");
        System.out.println();
        
@@ -147,6 +150,35 @@ public class InitDemo {
         System.out.println("[instance] id.string2 = "+ id.string2);
 
        }
+       
+       
+       */
+       
+       
+       
+       
+        System.out.println("Probamos conste de una instancia contra metodo estatico");
+        
+        System.out.println("");
+        /*
+        long tmpInst = System.nanoTime();
+        
+        InicializacionExcepciones iniInst = new InicializacionExcepciones("Soy el aviso de una instancia", 5);
+        iniInst.genero();
+        
+        long finInst = System.nanoTime();
+        
+        System.out.println("El coste de crear una instancia ha sido "+ (finInst - tmpInst)); 
+        */
+        
+        long tmpEst = System.nanoTime();
+        //InicializacionExcepciones.aviso2= "Soy el aviso de un metodo estatico";
+        //InicializacionExcepciones.ad = 4;
+        InicializacionExcepciones.GeneroEstatico(); 
+  
+        long finEst = System.nanoTime();
+        
+        System.out.println("El coste de crear una instancia ha sido "+ (finEst - tmpEst));   
        
     }
     

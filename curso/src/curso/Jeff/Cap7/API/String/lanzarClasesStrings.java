@@ -23,11 +23,13 @@ public class lanzarClasesStrings {
     //c.chars();
     //c.encontrar();
     //c.compararCadenas();
-     //trabajarCadenas();
+    c.trabajarCadenas();
+    // c.Ejercicio();
      
      StringBuilderJava sb = new StringBuilderJava();
      //sb.metodosContructores();
-     sb.BuliderMutable();
+     //sb.BuliderMutable();
+     //sb.Metodos();
                   
     }
     

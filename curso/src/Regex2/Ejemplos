@@ -1,0 +1,189 @@
+
+//https://es.javascript.info/regexp-greedy-and-lazy#:~:text=El%20modo%20perezoso%20de%20los,un%20signo%20de%20interrogaci%C3%B3n%20'%3F'
+//https://stackoverflow.com/questions/5319840/greedy-vs-reluctant-vs-possessive-qualifiers
+
+
+foo[1-5] =>foo1 al foo5
+foo[^1-5] => foo6 en adelante
+[0-4[6-8]]=> menos 5
+[0-9&&[345]] => números comunes a las condiciones 3,4,5
+[0-9&&[^345]] = números comunes menos 345
+
+Entrada vacía "" :
+Las dos primeras son "coincidencias de longitud cero "
+La cadena de entrada vacía ""no tiene longitud, por lo que  
+esto casos simplemente no coincide con nada en el índice 0.
+a? y a* => funcionan por que permiten 0 coincidencias
+a+ => No funciona por que debe haber mínimo una coincidencia
+
+Expresion a? 
+Entrada aaaaa
+a indice 0 terminado 1
+""
+""
+""
+a indice 4 terminado 5 
+a indice 5 terminado 5 "Permite que no aparezca 1 vez"
+
+
+Expresion a* 
+Entrada aaaaa
+"aaaaa" en el indice 0 terminado 5
+"" en el indice 5 terminado en 5 => "Permite que no aparezca 1 vez"
+
+Expresion a+
+Entrada aaaaa
+"aaaaa" en el indice 0 terminado 5 => "NO permite la no aparición"
+
+Ingrese su expresión regular: a? => La no coincidencia cuenta.
+Ingrese la cadena de entrada para buscar: ababaaaab
+Encontré el texto "a" comenzando en el índice 0 y terminando en el índice 1.
+Encontré el texto "" comenzando en el índice 1 y terminando en el índice 1.
+Encontré el texto "a" comenzando en el índice 2 y terminando en el índice 3.
+Encontré el texto "" comenzando en el índice 3 y terminando en el índice 3.
+Encontré el texto "a" comenzando en el índice 4 y terminando en el índice 5.
+Encontré el texto "a" comenzando en el índice 5 y terminando en el índice 6.
+Encontré el texto "a" comenzando en el índice 6 y terminando en el índice 7.
+Encontré el texto "a" comenzando en el índice 7 y terminando en el índice 8.
+Encontré el texto "" comenzando en el índice 8 y terminando en el índice 8.
+Encontré el texto "" comenzando en el índice 9 y terminando en el índice 9.
+
+Ingrese su expresión regular: a*
+Ingrese la cadena de entrada para buscar: ababaaaab
+Encontré el texto "a" comenzando en el índice 0 y terminando en el índice 1.
+Encontré el texto "" comenzando en el índice 1 y terminando en el índice 1.
+Encontré el texto "a" comenzando en el índice 2 y terminando en el índice 3.
+Encontré el texto "" comenzando en el índice 3 y terminando en el índice 3.
+Encontré el texto "aaaa" comenzando en el índice 4 y terminando en el índice 8.
+Encontré el texto "" comenzando en el índice 8 y terminando en el índice 8.
+Encontré el texto "" comenzando en el índice 9 y terminando en el índice 9.
+
+Ingrese su expresión regular: a+
+Ingrese la cadena de entrada para buscar: ababaaaab
+Encontré el texto "a" comenzando en el índice 0 y terminando en el índice 1.
+Encontré el texto "a" comenzando en el índice 2 y terminando en el índice 3.
+Encontré el texto "aaaa" comenzando en el índice 4 y terminando en el índice 8
+
+Expresion a{3}
+Entrada aa
+"No hay coincidencia"
+Entrada aaa:
+"Hay coincidencia"
+Entrada aaaa:
+"Encontrado aaa índice 0 terminado 3" 
+
+
+a{3,} => Al menos se repita 3 veces la a, sin limite de repeticiones
+
+Ingrese su expresión regular: a{3,6} // encuentre al menos 3 (pero no más de 6) a seguidas
+Ingrese la cadena de entrada para buscar: aaaaaaaaa
+Encontré el texto "aaaaaa" comenzando en el índice 0 y terminando en el índice 6.
+Encontré el texto "aaa" comenzando en el índice 6 y terminando en el índice 9.
+La segunda coincidencia empieza a contar a partir de la primera, 
+si hubiera una 'a' menos o más no aparecería.
+
+
+Enter your regex: (dog){3}
+Enter input string to search: dogdogdogdogdogdog
+I found the text "dogdogdog" starting at index 0 and ending at index 9.
+I found the text "dogdogdog" starting at index 9 and ending at index 18
+
+Enter your regex: dog{3}
+Enter input string to search: dogdogdogdogdogdog
+No match found.
+Falla por que si quitamos los parentesis {3} solo afecta a la letra g
+
+Ingrese su expresión regular: [abc]{3} =>  prueba a cambiar []()
+Ingrese la cadena de entrada para buscar: abccabaaaccbbbc 
+Encontré el texto "abc" comenzando en el índice 0 y terminando en el índice 3. 
+Encontré el texto "cab" comenzando en el índice 3 y terminando en el índice 6 
+Encontré el texto "aaa" comenzando en el índice 6 y terminando en el índice 9. 
+Encontré el texto "ccb" comenzando en el índice 9 y terminando en el índice 12. 
+Encontré el texto "bbc" comenzando en el índice 12 y terminando en el índice 15.
+
+        CUANTIFICADORES
+
+Codiciosos 
+
+    Leen toda la cadena antes de intentar una coincidencia. El 1º intento
+es toda la cadena, si falla retrocede un caracter de derecha a izquierda.
+Siempre devuelve la primera coincidencia.
+
+Ingrese su expresión regular: .*foo 
+// Busca una 'f' que es la que AFECTA el patron seguido de dos 'oo'
+//Se va al ultimo caracter que no es una 'f'
+//retrocece un caracter y deja  una 'o' fuera.
+//Luego prueba en el siguiente caracter 'o' y no empareja con la 'f'
+//retrocede otro caracter y encuentra la 'f' seguida de dos 'o' 
+ //prueba a eliminar una o dos 'o' al patron
+Ingrese la cadena de entrada para buscar: xfooxxxxxxfoo
+Encontré el texto "xfooxxxxxxfoo" comenzando en el índice 0 y terminando en el índice 13. 
+
+Enter your regex: .*foo
+Enter input string to search: xfooxxxxxxxx
+I found the text "xfoo" starting at index 0 and ending at index 4.
+
+Enter your regex: .*foo
+Enter input string to search: dfooxxxfooggggg
+I found the text "dfooxxxfoo" starting at index 0 and ending at index 10.
+
+Enter your regex: .*foo
+Enter input string to search: xfooxxxxxfooxxxx
+I found the text "xfooxxxxxfoo" starting at index 0 and ending at index 1
+
+Reacios
+
+    Empiezan por el principio de la cadena y van añadiendo un caracter.
+El último intento es la cadena completa.
+
+Ingrese su expresión regular: .*?foo // cuantificador reacio 
+Ingrese la cadena de entrada para buscar: xfooxxxxxxfoo 
+Encontré el texto "xfoo" comenzando en el índice 0 y terminando en el índice 4. 
+Encontré el texto "xxxxxxfoo" comenzando en el índice 4 y terminando en el índice 13.
+
+Posesivos
+
+    Los cuantificadores posesivos siempre comen toda la cadena de entrada, 
+intentando una vez (y solo una vez) una coincidencia. A diferencia de los cuantificadores 
+codiciosos,los cuantificadores posesivos nunca retroceden, incluso si hacerlo permitiría 
+que la combinación general tuviera éxito.
+Un cuantificador posesivo es como el cuantificador codicioso, 
+pero no da marcha atrás. Así que comienza haciendo .*coincidir toda la cadena, 
+sin dejar nada sin igualar. Entonces no queda nada para que coincida con la fexpresión regular.
+Dado que el cuantificador posesivo no da marcha atrás, la coincidencia falla allí.
+
+Enter your regex: .*+foo 
+Enter input string to search: xfooxxxxxxfoo
+No match found.
+
+
+
+\bsol\b => Busca una palabra dentro de una cadena
+\bperro\B => Busca dentro de las palabras
+Enter your regex: \bperro\B
+Enter input string to search: habia un perrote
+I found the text "perro" starting at index 9 and ending at index 14.
+
+Ingrese su expresión regular: (?i)foo
+Ingrese la cadena de entrada para buscar: FOOfooFoOfoO
+Encontré el texto "FOO" comenzando en el índice 0 y terminando en el índice 3.
+Encontré el texto "foo" comenzando en el índice 3 y terminando en el índice 6.
+Encontré el texto "FoO" comenzando en el índice 6 y terminando en el índice 9.
+Encontré el texto "foO" comenzando en el índice 9 y terminando en el índice 12.
+
+Las expresiones de marca incrustadas que corresponden a Patternlos campos de acceso público se presentan en la siguiente tabla:
+
+Constante                       Expresión de bandera incrustada equivalente
+Pattern.CANON_EQ                                Ninguno
+Pattern.CASE_INSENSITIVE                        (?i)
+Pattern.COMMENTS                                (?x)
+Pattern.MULTILINE                               (?m)
+Pattern.DOTALL                                  (?s)
+Pattern.LITERAL                                 Ninguno
+Pattern.UNICODE_CASE                            (?u)
+
+
+
+
+
+
