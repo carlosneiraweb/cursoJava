@@ -163,7 +163,17 @@ public class Cadenas {
                                 contiene la secuencia especificada de valores de caracteres.
                                 Detecta las mayusculas 
                                """);
-        System.out.println("Contiene 'el' seg =>" + seg.contains("Casa"));
+        StringBuffer eq = new StringBuffer("Casa");
+        System.out.println("Contiene 'el' seg =>" + seg.contains(eq));
+        
+        System.out.println("Java String .contentEquals ( CharSequence cs)");
+        System.out.println("""
+                           Es verdadero si y solo si esta cadena representa la misma secuencia 
+                           de valores de caracteres que la secuencia especificada.
+                           Ademas compara el tipo de dato, en este caso hemos 
+                           comparado un STring con StringBuffer
+                           """);
+        System.out.println("Diferencia mayusculas seg => " + seg.contentEquals(eq));
 
         System.out.println();
 
@@ -186,16 +196,7 @@ public class Cadenas {
         System.out.println("SEG acaba con 'eblo' " + seg.endsWith("eblo"));
         System.out.println("");
 
-        System.out.println("Equals de la clase Object no puedes fallar esto");
-        String uno = "Hola mundo";
-        String dos = new String("Hola mundo");
-        String tres = "hola";
-        String cuatro = "hola";
-        //Da igual utilizar el new que instanciar sin el
-        System.out.println("uno es equals a dos " + uno.equalsIgnoreCase(dos));
-        System.out.println("tres == cuatro");
-        System.out.println(tres == cuatro);
-        System.out.println("");
+       
 
         System.out.println("Java String.getBytes()");
         System.out.println("""
@@ -272,11 +273,7 @@ public class Cadenas {
         System.out.println(seg.lastIndexOf("a"));
         System.out.println("");
 
-        System.out.println("Java String .contentEquals ( CharSequence cs)");
-        System.out.println("""
-                           Es verdadero si y solo si esta cadena representa la misma secuencia 
-                           de valores de caracteres que la secuencia especificada.""");
-        System.out.println("Diferencia mayusculas seg => " + seg.contentEquals("Pueblo"));
+       
 
         //fin encontrar
     }
@@ -292,13 +289,14 @@ public class Cadenas {
 
         System.out.println("Java String(String original) Constructor");
         String s1 = "hola";
+        String s3 = "hola";
         String s2 = new String("hola");
         System.out.println("");
 
         System.out.println("¿ s1 contiene los mismos datos que s2 ? ");
         System.out.println(s1.equals(s2));
         System.out.println("¿ Son el mismo objeto ?");
-        System.out.println(s1 == s2);
+        System.out.println(s1 == s3);
         System.out.println("");
 
         System.out.println("Java String.compareTo(String anotherString)");
@@ -329,11 +327,54 @@ public class Cadenas {
                      Java String .equalsIgnoreCase ( String anotherString)""");
         System.out.println("SEG equals PRI" + pri.equals(seg));
         System.out.println("");
+         System.out.println("Equals de la clase Object no puedes fallar esto");
+        String uno = "Hola mundo";
+        String dos = new String("Hola mundo");
+        String tres = "hola";
+        String cuatro = "hola";
+        //Da igual utilizar el new que instanciar sin el
+        //Por que no se ha hecho new
+        System.out.println("uno es equals a dos " + uno.equalsIgnoreCase(dos));
+        System.out.println("tres == cuatro");
+        System.out.println(tres == cuatro);
+        System.out.println("");
 
-        System.out.println("String containsEquals compara si dos cadenas son iguales \n"
-                + " Distingue mayusculas");
+        System.out.println(
+            """
+            String containsEquals
+                 se encarga de comparar una variable de tipo String
+                 con un objeto de tipo StringBuffer, tambien puede ser un literal, 
+                 donde una vez hecha la comparacion nos devolvera un valor booleano 
+                 siendo true en el caso de que los caracteres de ambos objetos sean 
+                 iguales y en caso contrario false
+            """);
         System.out.println(pri.contentEquals(seg));
+        String cdn1 = "Las cadenas son inmutables";
+	StringBuffer cdn2 = new StringBuffer("Las cadenas son inmutables");
 
+	System.out.println(cdn1.contentEquals("Los enteros son mutables"));
+	System.out.println(cdn1.contentEquals(cdn2));
+
+        
+        
+        System.out.println("Diferencia entre isBlank y empty");
+        System.out.println("""
+                           
+            StringUtils.isBlank(null)      = true 
+            StringUtils.isBlank("")        = true   
+            StringUtils.isBlank(" ")       = true   
+            StringUtils.isBlank("bob")     = false   
+            StringUtils.isBlank("  bob  ") = false     
+                           
+            StringUtils.isEmpty(null)      = true 
+            StringUtils.isEmpty("")        = true   
+            StringUtils.isEmpty(" ")       = false   
+            StringUtils.isEmpty("bob")     = false   
+            StringUtils.isEmpty("  bob  ") = false                
+                           
+                           
+                           """);
+        
         //fin compararCadenas
     }
 
@@ -393,7 +434,7 @@ public class Cadenas {
         System.out.println("");
 
         System.out.println("Java String.subSequence(int beginIndex, int endIndex)");
-        System.out.println("Devuelve una cadena desde el punto de inicio al de fin");
+        System.out.println("Devuelve una CharSequence  desde el punto de inicio al de fin");
         CharSequence x = pri.subSequence(1, 3);
         System.out.println(x);
         System.out.println("");
@@ -472,14 +513,36 @@ public class Cadenas {
         
         
         
-        System.out.println("Metodo matches clase String");
+        System.out.println("Metodo matches clase String nos devuelve true o false");
         String reg = ".*[abc].*";
         String cad = "la casa vacia";
         Boolean t = cad.matches(reg);
         System.out.println(t );
+        System.out.println("");
         
         
+        System.out.println("Metodo regionMatches devuelve true o false");
+        String cd1 = "Bienvenidos a tinchicus.com";
+        String cd2 = "tinchicus";
+        String msj = "Valor devuelto : ";
+        int pos1 = cd1.indexOf(cd2);
+        
+        System.out.println(msj + cd1.regionMatches(pos1, cd2, 0, 1));
+        cd2 = "Tinchicus";
+        System.out.println(msj + cd1.regionMatches(pos1, reg, 0 ,9));
+        System.out.println(msj + cd1.regionMatches(true, pos1, cd2, 0, 9));
+        System.out.println("");
+        
+        
+        
+        
+        System.out.println("Metodo lastIndexOf");
+        String last = "Volviendo a casa por al lado de la ....";
+        String bus = "ado";
+        System.out.println(last.lastIndexOf(bus,20));
         //fin trabajarCadenas
+        
+        
     }
     
     

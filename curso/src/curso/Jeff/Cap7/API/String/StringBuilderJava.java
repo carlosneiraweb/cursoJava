@@ -37,8 +37,9 @@ public class StringBuilderJava {
        System.out.println("Metodos sobre cargado, admite de todo tipo");
        StringBuilder build = new StringBuilder("Mi primer StringBuilder en Java");       
        System.out.println(build);
-      // String builSt = new StringBuilder("fffff");
-   
+       //CharSequence builSt = new StringBuilder("fffff");
+      
+       
    
     }
       
@@ -55,16 +56,32 @@ public class StringBuilderJava {
        System.out.println("Añado mundo ");
        muto.append(" mundo");
        System.out.println(muto);
+       
+       
+       
+       System.out.println("");
        System.out.println("Variable de la clase String inmutable");
        String noMutable = new String("Hola Mudo");
+        
        System.out.println("noMutable => "+ noMutable);
        System.out.println("Utilizamos el .concat para intentar añadir algo ");
        noMutable.concat("sol");
        System.out.println("Resultado => "+noMutable);
-        System.out.println("Solo podemos cambiar su valor con una nueva asignacion");
-        System.out.println("noMutable = noMutable.concat");
+        
+       System.out.println("");
+        
+        
+        
+       
+       
+       
+       
+       
+       
+       System.out.println("Solo podemos cambiar su valor con una nueva asignacion");
+       System.out.println("noMutable = noMutable.concat");
        noMutable = noMutable.concat("Cambio");
-        System.out.println(noMutable);
+       System.out.println(noMutable);
        
        
        
@@ -77,9 +94,19 @@ public class StringBuilderJava {
      */
     public void AppendAndInsert(){
         
-        
-        
-        
+    StringBuilder st = new StringBuilder("hola");
+    System.out.println(st);
+    System.out.println("Añadimos Mundo con append");
+    st.append("Mundo");
+    System.out.println(st);
+    System.out.println("");
+    
+    System.out.println("Metodo insert");
+    StringBuilder sb = new StringBuilder("Hola ");
+    System.out.println(sb);
+    System.out.println("Añadimos con insert Mundo");
+    sb.insert(2," Mundo");
+    System.out.println(sb);
         
         
      //fin   AppendAndInsert 
@@ -96,6 +123,10 @@ public class StringBuilderJava {
         System.out.println("Tengo una capacidad de "+uno.capacity());
         System.out.println("Delete 0,3");
         System.out.println(uno.delete(0, 3));
+        System.out.println("Ahora le damos la vuelta con reverse");
+        System.out.println(uno.reverse());
+        System.out.println("La volvemos a dejar igual");
+        System.out.println(uno.reverse());
         
         
         

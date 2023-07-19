@@ -3,6 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+//https://www.campusmvp.es/recursos/post/cadenas-mutables-e-inmutables-en-java-cuando-usar-string-stringbuilder-y-stringbuffer.aspx
 package curso.Jeff.Cap7.API.String;
 
 /**
@@ -23,13 +25,14 @@ public class lanzarClasesStrings {
     //c.chars();
     //c.encontrar();
     //c.compararCadenas();
-    c.trabajarCadenas();
+    //c.trabajarCadenas();
     // c.Ejercicio();
      
      StringBuilderJava sb = new StringBuilderJava();
      //sb.metodosContructores();
      //sb.BuliderMutable();
-     //sb.Metodos();
+     //sb.AppendAndInsert();
+     sb.Metodos();
                   
     }
     
