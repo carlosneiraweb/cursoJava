@@ -1,9 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/**
+*http://puntocomnoesunlenguaje.blogspot.com/2013/09/java-interfaces.html
+*/
 package Interfaces;
+
+import Interfaces.Animal;
 
 /**
  *

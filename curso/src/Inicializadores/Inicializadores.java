@@ -1,68 +1,51 @@
 package Inicializadores;
 
-
+/**
+ *
+ * 1º   Inicializador de clase padre
+ * 2º   Inicializador de clase hija
+ * 3    Inicializador de instancia clase padre
+ * 4º   Constructor clase padre
+ * 5º   Inicializador de instancia clase hija
+ * 6º   Constructor clase hija
+ * 
+ */
 
 
 public class Inicializadores extends padreINicializadores{
-    //Primero se ejecutarán los inicializadores de clase (01), 
-    //los de instancia (02) y al final el constructor.
-   
-/*
- La  variables y referencias  y los inicializadores de instancia 
-    solo se inicializan cuando se instancia la clase. 
-    Por otro lado, las variables y referencias y los inicializadores estáticos 
-    se inicializan aunque se acceda a la clase sin realizar llamadas al constructor.
-    Es decir, para inicializar estos últimos no es necesario que la clase se instancie, 
-    ya que al ser estáticos no dependen de una instancia de la clase.
-    
-    Las variables de instancia pueden usar this y super
-    Por cada llamada a constructor se instancian
 
     
-    */
-    
-    static int a; //1
-    int b; //2
+    static int staticHija;
+    static int staticSinInicializar;
+    int instaciaHija; //2
     public int x;
 
-    public Inicializadores(Integer i) {
+    //Integer i
+    public Inicializadores(int i) {
         super(i);
-        System.out.printf("Desde constructor Inicializadores Valor de a:%1s\n Valor de b:%2s\n", a, b);
+        System.out.println("Estamos en el constructor de la clase hija");
+        System.out.printf("Desde constructor Inicializadores Valor de staticHija :%1s \n Valor de instaciaHija:%2s\n", staticHija, instaciaHija);
+        System.out.println("");
     }
  
-    
-    
-    
-//    public Inicializadores() {
-//        
-//    }
 
 //Inicializador Instancia
     { //2
-        b = a * 2;
-        System.out.println("Iniacializador de Instancia de INicializadores "+ b);
+        System.out.println("Valor default de la variable de instancia en clase hija 'instaciaHija' => "+instaciaHija);
+        instaciaHija = staticHija * 2;
+        System.out.println("Iniacializador de Instancia desde clase hija instaciaHija => "+ instaciaHija);
+        System.out.println("Se pueden usar variables de clase en inicializadores de instancia");
+        System.out.println("");
     }
  
  //Inicializador de clase
     static { //1
-        a = 15;
-        System.out.println("Inicializador de clase desde Inicializadores "+ a);
-        
+        System.out.println("Valor default de variable staticHija de clase en la clase hija => "+staticHija);
+        staticHija = 5;
+        System.out.println("Se asigna valor determinado desde clase hija en el inicializador de clase => "+ staticHija);
+        System.out.println("");
     }   
     
-      public static void main(String[] args) {
-          
-        Inicializadores ini = new Inicializadores(5000);
-        System.out.println("Accediendo a un inicializador sin instanciar la clase"+Inicializadores.a); 
-          
-          
-       
-   
-    }
-          
-          
-          
-      
-      
+     
     //Inicializadores 
 }

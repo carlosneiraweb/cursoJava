@@ -12,15 +12,18 @@ package Enum;
 
    
   public  enum Precio {
+    BARATO(0, 10),
     CARO(100, 1000), 
-    MEDIO(10, 100), 
-    BARATO(0, 10);
+    MEDIO(10, 100);
+   
 
     private int precioMinimo;
     private int precioMaximo;
 
     //Constructor privado
     //No se pueden crear nuevos objetos
+    //Pero es necesario para asignar el valor 
+    //a la enum aunque ya tenga el valor asignado
     private Precio(int minimo, int maximo) {
         precioMinimo = minimo;
         precioMaximo = maximo;
@@ -34,6 +37,7 @@ package Enum;
         return precioMinimo;
     }
 
+    
     
     
     

@@ -21,7 +21,7 @@ public class Futbolista {
 
 	public Futbolista(String nombre, int dorsal, Demarcacion demarcacion, Equipo equipo) {
 		this.dorsal = dorsal;
-		Nombre = nombre;
+		this.Nombre = nombre;
 		this.demarcacion = demarcacion;
 		this.equipo = equipo;
 	}

@@ -30,6 +30,10 @@ public enum Equipo {
 	public int getPuestoLiga() {
 		return puestoLiga;
 	}	
+
+        public void setNombreClub(String nombreClub) {
+            this.nombreClub = nombreClub;
+        }
     
     
     

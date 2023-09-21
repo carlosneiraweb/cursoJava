@@ -20,9 +20,11 @@ public class Cadenas {
 
     String saludo = "hello";
     String saludo2 = new String("hello");
-
+    
+    
     public void bytes() {
         
+      
         //Entero con signo 8 bits de -128 a 128
         byte[] b = saludo2.getBytes();
         System.out.println(b[0] + " " + Arrays.toString(b));
@@ -123,7 +125,7 @@ public class Cadenas {
 
         String pri = "casa en el pueblo";
         String seg = "Casa en el pueblo";
-
+        
         String strOb1 = "java2s.com";
         
         System.out.println("Java String.charAt(int index)");
@@ -236,7 +238,7 @@ public class Cadenas {
         Boolean bol = false;
         String intg = String.valueOf(inte);
         String bole = String.valueOf(bol);
-        System.out.println("Mostrando Strin con valueOf => " + intg
+        System.out.println("Mostrando String con valueOf => " + intg
                 + " y Boolean => " + bole);
         int z = 10;
         Integer a2 = Integer.valueOf(z);
@@ -540,6 +542,19 @@ public class Cadenas {
         String last = "Volviendo a casa por al lado de la ....";
         String bus = "ado";
         System.out.println(last.lastIndexOf(bus,20));
+        System.out.println("");
+ 
+        
+        System.out.println("Convertir un String en una cadena");;
+        String st = "100";
+        int ite = Integer.parseInt(st);
+        System.out.println(ite/4);
+        System.out.println("");
+        System.out.println("Convertimos un int a String, hay 3 formas");
+        System.out.println("Concatenar STring vacio a entero String s1 = '' + i;");
+        System.out.println("Con el método valueOf String s2 = Stringt.valueOf(i);");
+        System.out.println("Utilizando el parse + toSTring String s3 = Integer.toString(i);");
+        
         //fin trabajarCadenas
         
         

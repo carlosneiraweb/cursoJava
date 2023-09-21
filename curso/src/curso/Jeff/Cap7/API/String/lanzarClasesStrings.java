@@ -11,7 +11,7 @@ package curso.Jeff.Cap7.API.String;
  *
  * @author carlos
  */
-public class lanzarClasesStrings {
+public class lanzarClasesStrings{
     
     
     
@@ -25,14 +25,14 @@ public class lanzarClasesStrings {
     //c.chars();
     //c.encontrar();
     //c.compararCadenas();
-    //c.trabajarCadenas();
+    c.trabajarCadenas();
     // c.Ejercicio();
      
      StringBuilderJava sb = new StringBuilderJava();
      //sb.metodosContructores();
      //sb.BuliderMutable();
      //sb.AppendAndInsert();
-     sb.Metodos();
+     //sb.Metodos();
                   
     }
     

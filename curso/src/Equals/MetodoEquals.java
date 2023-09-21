@@ -68,8 +68,7 @@ public void mostrarEjemplos(){
         String s2 = new String("GEEKS"); 
         String uno = "hola";
         String dos = "hola";
-        
-
+       
          String mensaje1="hola";
     String mensaje2="hola";
     
@@ -77,7 +76,8 @@ public void mostrarEjemplos(){
     System.out.println(mensaje1.equals(mensaje2));
     
     
-    
+        
+        
     
         System.out.print("Compara string sin crear objeto string uno == dos  ");
         System.out.println(uno == dos);
